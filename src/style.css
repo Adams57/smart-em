@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --p-primary-color: #0c8ce9 !important;
+  --p-primary-hover-color: #2e95df !important;
+
+  --p-primary-hover-color: var(--p-primary-color) !important;
+  --p-primary-active-color: var(--p-primary-color) !important;
+  --p-highlight-background: rgb(162, 213, 250) !important;
+  --p-highlight-focus-background: rgb(162, 213, 250) !important;
+  --p-highlight-color: var(--p-primary-color) !important;
+  --p-highlight-focus-color: var(--p-primary-color) !important;
+
+  --p-button-outlined-primary-border-color: var(--p-primary-color) !important;
+  --p-button-outlined-primary-color: var(--p-primary-color) !important;
+  --p-button-outlined-primary-active-background: var(
+    --p-highlight-background
+  ) !important;
+  --p-button-outlined-primary-hover-background: #cee8fb63 !important;
+  --p-button-text-primary-active-background: var(
+    --p-highlight-background
+  ) !important;
+  --p-button-text-primary-hover-background: var(
+    --p-highlight-background
+  ) !important;
+}
+
+@theme {
+  --color-primary: var(--p-primary-color);
+  --color-primary-light: var(--p-highlight-background);
+  --color-dark: #1e1f23;
+  --color-dark-100: #2f2f35;
+  --color-dark-200: #18181b;
+  --color-border: #d2d2d3;
+  --color-border-50: #8f8f91;
+  --color-border-100: #bfbfbf;
+  --color-border-200: #f6f6f6;
+  --color-border-300: #e9e9e9;
+  --color-success-100: #eaf6eb;
+  --color-success-800: #28a138;
+  --color-success-900: #20812d;
+  --color-danger-100: #ffe9e9;
+  --color-danger-800: #ff2727;
+  --color-danger-850: #f50909;
+  --color-danger-900: #e01212;
+  --color-danger-950: #b91c1c;
+  --color-danger-960: #4c1d1d;
+  --color-warning-100: #ffecde;
+  --color-warning-800: #ffa259;
+  --color-warning-900: #cc8247;
+}
+
+.p-toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  z-index: 1000;
+}
+
+/*
+.p-inputtext:not(.p-disabled).p-error,
+.p-select:not(.p-disabled).p-error,
+.p-inputtext:not(.p-disabled).p-error:focus,
+.p-select:not(.p-disabled).p-error.p-focus {
+  @apply !border-danger-900;
+} */
