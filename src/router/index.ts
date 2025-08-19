@@ -40,7 +40,13 @@ const routes: RouteRecordRaw[] = [
         path: ROUTES.DASHBOARD.path,
         name: ROUTES.DASHBOARD.name,
         component: ROUTES.DASHBOARD.component,
-        meta: { requiresAuth: false }
+        meta: { requiresAuth: true }
+      },
+      {
+        path: ROUTES.USERS.path,
+        name: ROUTES.USERS.name,
+        component: ROUTES.USERS.component,
+        meta: { requiresAuth: true }
       }
     ]
   }

@@ -1,12 +1,14 @@
 export const oneIcons = `<svg></svg>`;
 
-export const logoIcon = `<svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="0.125" y="0.499878" width="25.6985" height="25.6985" fill="url(#pattern0_0_3989)"/>
+export const logoIcon = `<svg width="26" height="27" viewBox="0 0 121 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40.3214 9.46172C40.8807 9.22537 41.3879 8.88118 41.8142 8.4488C42.2405 8.01641 42.5774 7.5043 42.8058 6.9417C43.0341 6.3791 43.1494 5.77703 43.1451 5.16986C43.1408 4.5627 43.0169 3.96233 42.7806 3.40304C42.5442 2.84374 42.2001 2.33648 41.7677 1.9102C41.3353 1.48393 40.8232 1.14699 40.2606 0.918631C39.698 0.690271 39.0959 0.574959 38.4887 0.57928C37.8816 0.583601 37.2812 0.707471 36.7219 0.943815C25.8335 5.54048 16.5422 13.2459 10.0106 23.096C3.47889 32.9461 -0.00316785 44.5036 2.16252e-06 56.3225C2.16252e-06 89.5128 26.9035 116.416 60.0938 116.416C93.284 116.416 120.188 89.5128 120.188 56.3225C120.191 44.5036 116.709 32.9461 110.177 23.096C103.645 13.2459 94.354 5.54048 83.4656 0.943815C82.9063 0.707471 82.3059 0.583601 81.6988 0.57928C81.0916 0.574959 80.4895 0.690271 79.9269 0.918631C79.3643 1.14699 78.8522 1.48393 78.4198 1.9102C77.9874 2.33648 77.6433 2.84374 77.4069 3.40304C77.1706 3.96233 77.0467 4.5627 77.0424 5.16986C77.0381 5.77703 77.1534 6.3791 77.3817 6.9417C77.6101 7.5043 77.947 8.01641 78.3733 8.4488C78.7996 8.88118 79.3068 9.22537 79.8661 9.46172C90.6675 14.0345 99.5567 22.1996 105.029 32.5745C110.5 42.9494 112.218 54.8966 109.892 66.393C107.566 77.8894 101.338 88.2286 92.2626 95.6598C83.1876 103.091 71.8232 107.158 60.0938 107.171C48.3529 107.179 36.9712 103.123 27.8807 95.6929C18.7901 88.2626 12.551 77.9154 10.2223 66.4078C7.89364 54.9002 9.61897 42.9413 15.1054 32.5612C20.5918 22.1812 29.5013 14.0195 40.3214 9.46172Z" fill="#0084FF"/>
+<g clip-path="url(#clip0_1_16892)">
+<path d="M88.2778 20.1898H52.8486L30.2808 58.8344H52.8486L33.5263 97.479L85.0474 49.1732H59.2793L88.2778 20.1898Z" fill="#FF8000"/>
+</g>
 <defs>
-<pattern id="pattern0_0_3989" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_0_3989" transform="scale(0.0153846)"/>
-</pattern>
-<image id="image0_0_3989" width="65" height="65" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+<clipPath id="clip0_1_16892">
+<rect width="77.2891" height="77.2891" fill="white" transform="translate(21.9178 20.1898)"/>
+</clipPath>
 </defs>
 </svg>
 `;
@@ -24,6 +26,44 @@ export const microsoftIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fi
 <clipPath id="clip0_2_3">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
+</defs>
+</svg>
+`;
+
+export const miniMenuBtn = `<svg width="37" height="37" viewBox="0 0 41 41" fill="FILLCOLOR" xmlns="http://www.w3.org/2000/svg">
+<rect x="1.31172" y="0.750012" width="39.138" height="39.138" rx="8.25" fill="white"/>
+<rect x="1.31172" y="0.750012" width="39.138" height="39.138" rx="8.25" stroke="#E9E9E9" stroke-width="1.1"/>
+<g clip-path="url(#clip0_1103_242506)">
+<path d="M20.8808 13.7191C20.2758 13.7191 19.7808 14.2141 19.7808 14.8191C19.7808 15.4241 20.2758 15.9191 20.8808 15.9191C21.4858 15.9191 21.9808 15.4241 21.9808 14.8191C21.9808 14.2141 21.4858 13.7191 20.8808 13.7191ZM20.8808 24.7191C20.2758 24.7191 19.7808 25.2141 19.7808 25.8191C19.7808 26.4241 20.2758 26.9191 20.8808 26.9191C21.4858 26.9191 21.9808 26.4241 21.9808 25.8191C21.9808 25.2141 21.4858 24.7191 20.8808 24.7191ZM20.8808 19.2191C20.2758 19.2191 19.7808 19.7141 19.7808 20.3191C19.7808 20.9241 20.2758 21.4191 20.8808 21.4191C21.4858 21.4191 21.9808 20.9241 21.9808 20.3191C21.9808 19.7141 21.4858 19.2191 20.8808 19.2191Z" fill="STROKECOLOR"/>
+</g>
+<defs>
+<clipPath id="clip0_1103_242506">
+<rect width="17.6" height="17.6" fill="white" transform="translate(12.0806 11.519)"/>
+</clipPath>
+</defs>
+</svg>
+`;
+
+export const userIcon = `<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_396_94482)">
+<rect x="2" y="1" width="48" height="48" rx="10" fill="FILLCOLOR"/>
+<rect x="2.5" y="1.5" width="47" height="47" rx="9.5" stroke="#E9EAEB"/>
+<circle cx="26" cy="19" r="4" stroke="STROKECOLOR" stroke-width="1.5"/>
+<circle cx="31" cy="31" r="4" stroke="STROKECOLOR" stroke-width="1.5"/>
+<path d="M31 29.6666V32.3333" stroke="STROKECOLOR" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29.6665 31L32.3332 31" stroke="STROKECOLOR" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 33.8344C27.3663 33.9421 26.695 34 26 34C22.134 34 19 32.2091 19 30C19 27.7909 22.134 26 26 26C27.7135 26 29.2832 26.3518 30.5 26.9359" stroke="STROKECOLOR" stroke-width="1.5"/>
+</g>
+<defs>
+<filter id="filter0_d_396_94482" x="0" y="0" width="52" height="52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0392157 0 0 0 0 0.0509804 0 0 0 0 0.0705882 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_396_94482"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_396_94482" result="shape"/>
+</filter>
 </defs>
 </svg>
 `;

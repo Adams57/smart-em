@@ -5,7 +5,7 @@
       <template #content>
         <auth-header
           first="SmartEM"
-          second="Drilling & Intervention Activities Planner"
+          second=""
           :headerTitle="props.headerTitle"
           :subTitle="props.subTitle" />
         <div class="mt-10 md:mt-20">

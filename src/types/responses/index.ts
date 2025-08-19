@@ -13,3 +13,20 @@ export interface ApiResponse<T> {
   isSuccessful: boolean;
   code: number;
 }
+
+export interface Pagination {
+  pageNumber: number;
+  pageSize: number;
+  lastKey?: string;
+  totalPages?: number;
+  totalCount?: number;
+  PrevPageLink?: string;
+  NextPageLink?: string;
+}
+
+export const handleApiError = (error: unknown) => {
+  if (error instanceof Error) {
+    throw error;
+  }
+  throw new Error(error as string);
+};

@@ -33,17 +33,19 @@ export interface CreateUserRequest {
   email: string;
   firstName: string;
   lastName: string;
-  jobTitle: string;
-  accountType: string;
-  operationsUnitId: string;
+  jobTitle?: string;
+  accountType?: string;
+  operationsUnitId?: string;
 }
 
 export interface UpdateUserRequest {
   id: string;
   firstName: string;
   lastName: string;
-  jobTitle: string;
-  operationsUnitId: string;
+  email: string;
+  phoneNumber?: string;
+  jobTitle?: string;
+  operationsUnitId?: string;
 }
 
 export interface LoginResponseData {

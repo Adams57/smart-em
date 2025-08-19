@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center gap-4 p-4 justify-between">
     <header class="flex gap-2 items-center">
-      <img src="/soma.svg" />
+      <icon :icon="logoIcon" />
       <h1 class="text-2xl font-bold mr-15 text-[#0084FF]">SmartEM</h1>
       <h1 class="font-semibold text-4xl ml-15">{{ routeName }}</h1>
     </header>
@@ -10,8 +10,16 @@
         {{ firstName ? 'Welcome' : '' }}
         <span class="font-bold">{{ firstName }}</span>
       </div>
+
+      <button
+        class="relative cursor-pointer w-10 h-10 rounded-full bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center"
+        @click="toggletheme">
+        <v-icon scale="1.2" name="fa-moon" />
+      </button>
+
       <!-- Notification with dropdown-->
       <div class="relative group">
+
         <button
           class="relative cursor-pointer w-10 h-10 rounded-full bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center"
           @click="openNotifications">
@@ -188,6 +196,7 @@
   import { useRoute } from "vue-router";
   import { useAuthStore } from "@/store/auth";
   import { useToast } from "primevue/usetoast";
+import { logoIcon } from "@/components/icon-assets/icons";
   const route = useRoute();
   const authStore = useAuthStore();
   const toast = useToast();
@@ -227,6 +236,10 @@
     // return authStore.user?.imageUrl || "https://primefaces.org/cdn/primevue/images/organization/walter.jpg";
     return authStore.user?.imageUrl || null;
   });
+
+  const toggletheme = () => {
+
+  }
 
   // Handle logout
   const handleLogout = async () => {

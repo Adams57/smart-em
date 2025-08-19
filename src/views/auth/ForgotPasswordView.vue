@@ -1,7 +1,7 @@
 <template>
   <AuthLayout
     headerTitle="Forgot Password"
-    subTitle="Enter an email associated with your DIAP account. We will send you an email to reset your password.">
+    subTitle="Enter an email associated with your SmartEm account. We will send you an email to reset your password.">
     <form
       class="space-y-6 mt-[90px]"
       @submit.prevent="onResetPassword"

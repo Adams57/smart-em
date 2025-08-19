@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col transition-all duration-300 ease-in-out border border-[var(--color-border-300)]"
+    class="flex flex-col transition-all duration-300 ease-in-out border border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]"
     :class="isCollapsed ? 'w-[107px]' : 'w-[260px]'">
     <header class="section-header mt-2 relative flex gap-2 items-center">
       <button
@@ -21,9 +21,9 @@
           :route="ROUTES.DASHBOARD.path" />
         <dashboard-link
           title="User Account"
-          icon="fa-qrcode"
+          icon="fa-user"
           :collapsed="isCollapsed"
-          :route="'/home'" />
+          :route="ROUTES.USERS.path" />
         <dashboard-link
           title="Meter & Consumption"
           icon="fa-qrcode"

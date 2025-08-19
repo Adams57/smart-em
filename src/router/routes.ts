@@ -38,6 +38,6 @@ export const ROUTES = Object.freeze({
   USERS: {
     path: "/users",
     name: "Users",
-    component: () => import("@/views/Users.vue")
+    component: () => import("@/views/users/Users.vue")
   },
 });
