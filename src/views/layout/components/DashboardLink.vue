@@ -27,7 +27,7 @@
 <style scoped>
   li.link:has(.link-active) {
     color: #fff;
-    background-color: #0084FF;
+    background-color: #0084ff;
   }
   li.link:hover {
     color: #00bfff;

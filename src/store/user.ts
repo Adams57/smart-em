@@ -1,6 +1,10 @@
 import { defineStore } from "pinia";
 import ApiService from "@/api";
-import { handleApiError, type PaginatedResponse, type Pagination } from "@/types/responses";
+import {
+  handleApiError,
+  type PaginatedResponse,
+  type Pagination
+} from "@/types/responses";
 import type { CreateUserRequest, UpdateUserRequest, User } from "@/types/auth";
 
 export const useUserStore = defineStore("users", {

@@ -36,7 +36,9 @@
     </template>
 
     <div class="px-15 !flex-1 !flex !flex-col">
-      <label class="text-2xl mb-5 border-b-1 border-blue-400">Bio Information</label>
+      <label class="text-2xl mb-5 border-b-1 border-blue-400"
+        >Bio Information</label
+      >
       <form
         @submit="onBioInfoSubmit"
         class="flex-1 flex flex-col overflow-y-auto h-[calc(60vh)]">
@@ -48,9 +50,7 @@
           <div class="flex flex-col w-full gap-1">
             <div class="flex justify-between items-center">
               <label for="name" class="font-semibold">First Name</label>
-              <small class="text-red-500">{{
-                name.errorMessage.value
-              }}</small>
+              <small class="text-red-500">{{ name.errorMessage.value }}</small>
             </div>
             <pr-input-text
               id="name"
@@ -60,9 +60,7 @@
           </div>
           <div class="flex flex-col w-full gap-1">
             <div class="flex justify-between items-center">
-              <label for="lastName" class="font-semibold"
-                >Last Name</label
-              >
+              <label for="lastName" class="font-semibold">Last Name</label>
               <small class="text-red-500">{{
                 lastName.errorMessage.value
               }}</small>
@@ -78,9 +76,7 @@
         <div class="flex flex-col w-full gap-1 mb-4">
           <div class="flex justify-between items-center">
             <label for="email" class="font-semibold">Email Address</label>
-            <small class="text-red-500">{{
-              email.errorMessage.value
-            }}</small>
+            <small class="text-red-500">{{ email.errorMessage.value }}</small>
           </div>
           <pr-input-text
             type="email"

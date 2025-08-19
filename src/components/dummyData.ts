@@ -1,56 +1,56 @@
 export const USAGE_HISTORY = [
   {
     period: "Today's Usage",
-    total: "5.3kW",
+    total: "5.3kW"
   },
   {
     period: "July 32, 2025",
-    total: "1.5kW",
+    total: "1.5kW"
   },
   {
     period: "July 32, 2025",
-    total: "4.7kW",
+    total: "4.7kW"
   },
   {
     period: "July 32, 2025",
-    total: "2.47kW",
+    total: "2.47kW"
   },
   {
     period: "July 32, 2025",
-    total: "8.12kW",
+    total: "8.12kW"
   },
   {
     period: "July 32, 2025",
-    total: "6.0kW",
+    total: "6.0kW"
   },
   {
     period: "July 32, 2025",
-    total: "1.9kW",
+    total: "1.9kW"
   },
   {
     period: "July 32, 2025",
-    total: "3.3kW",
+    total: "3.3kW"
   },
   {
     period: "July 32, 2025",
-    total: "2.5kW",
+    total: "2.5kW"
   },
   {
     period: "July 32, 2025",
-    total: "5.3kW",
+    total: "5.3kW"
   },
   {
     period: "July 32, 2025",
-    total: "9.8kW",
+    total: "9.8kW"
   },
   {
     period: "July 32, 2025",
-    total: "11.7kW",
+    total: "11.7kW"
   },
   {
     period: "July 32, 2025",
-    total: "52.1kW",
-  },
+    total: "52.1kW"
+  }
 ];
 
 export const NOTIFICATIONS_ALERTS = [
@@ -88,46 +88,46 @@ export const COMPLAINTS_SUPPORT = [
   {
     title: "We have a fallen electric pole",
     time: "8:30 AM"
-  },
+  }
 ];
 
 // Chart data for Electricity Demand & Supply
 export const demandSupplyData = {
-  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+  labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
   datasets: [
     {
-      label: 'Expected supply',
+      label: "Expected supply",
       data: [20, 40, 60, 80, 120, 60, 20],
-      borderColor: '#f44336',
-      backgroundColor: 'rgba(144,133,160,0.25)',
+      borderColor: "#f44336",
+      backgroundColor: "rgba(144,133,160,0.25)",
       fill: true,
       tension: 0.4,
       pointRadius: 0,
       borderWidth: 2,
-      order: 2,
+      order: 2
     },
     {
-      label: 'Actual supply',
+      label: "Actual supply",
       data: [10, 25, 35, 50, 70, 30, 10],
-      borderColor: '#4caf50',
-      backgroundColor: 'rgba(76,175,80,0.25)',
+      borderColor: "#4caf50",
+      backgroundColor: "rgba(76,175,80,0.25)",
       fill: true,
       tension: 0.4,
       pointRadius: 0,
       borderWidth: 2,
-      order: 3,
+      order: 3
     },
     {
-      label: '', // Faint blue background line
+      label: "", // Faint blue background line
       data: [100, 90, 80, 70, 60, 80, 100],
-      borderColor: '#90caf9',
-      backgroundColor: 'rgba(0,0,0,0)',
+      borderColor: "#90caf9",
+      backgroundColor: "rgba(0,0,0,0)",
       fill: false,
       borderWidth: 2,
       borderDash: [5, 5],
       pointRadius: 0,
       tension: 0.4,
-      order: 1,
+      order: 1
     }
   ]
 };
@@ -139,24 +139,24 @@ export const demandSupplyOptions = (color: string) => ({
       labels: {
         color: color,
         font: { size: 14 },
-        filter: (legendItem: {text: string}) => legendItem.text !== '' // Hide faint blue line from legend
+        filter: (legendItem: { text: string }) => legendItem.text !== "" // Hide faint blue line from legend
       }
     },
     tooltip: {
-			mode: 'index',
-			intersect: false,
-		},
+      mode: "index",
+      intersect: false
+    }
   },
   scales: {
     x: {
       ticks: { color: color, font: { size: 12 } },
-      grid: { color: '#eee' }
+      grid: { color: "#eee" }
     },
     y: {
       min: 0,
       max: 130,
       ticks: { color: color, font: { size: 12 } },
-      grid: { color: '#eee' }
+      grid: { color: "#eee" }
     }
   }
 });

@@ -1,5 +1,6 @@
 <template>
-  <div class="p-7 h-full flex flex-col gap-6 border border-[var(--color-border-300)] bg-[#F6F6F6] dark:bg-dark-200 dark:border-[var(--p-content-border-color)]">
+  <div
+    class="p-7 h-full flex flex-col gap-6 border border-[var(--color-border-300)] bg-[#F6F6F6] dark:bg-dark-200 dark:border-[var(--p-content-border-color)]">
     <div>
       <div class="flex-1 flex flex-col flex-wrap">
         <h2 class="text-xl font-semibold mb-3">Profile Management</h2>
@@ -11,7 +12,9 @@
               <div class="flex flex-col gap-4 flex-1">
                 <div>
                   <div class="flex justify-between">
-                    <label for="firstName" class="font-normal text-lg">First Name</label>
+                    <label for="firstName" class="font-normal text-lg"
+                      >First Name</label
+                    >
                     <span v-if="errors?.firstName" class="text-red-500 text-xs">
                       {{ errors.firstName }}
                     </span>
@@ -25,9 +28,7 @@
                 </div>
                 <div>
                   <div class="flex justify-between">
-                    <label for="email" class="font-normal text-lg"
-                      >Email</label
-                    >
+                    <label for="email" class="font-normal text-lg">Email</label>
                     <span v-if="errors?.email" class="text-red-500 text-xs">
                       {{ errors.email }}
                     </span>
@@ -44,7 +45,9 @@
               <div class="flex flex-col gap-4 flex-1">
                 <div>
                   <div class="flex justify-between">
-                    <label for="lastName" class="font-normal text-lg">Other Name</label>
+                    <label for="lastName" class="font-normal text-lg"
+                      >Other Name</label
+                    >
                     <span v-if="errors?.lastName" class="text-red-500 text-xs">
                       {{ errors.lastName }}
                     </span>
@@ -61,7 +64,9 @@
                     <label for="phoneNumber" class="font-normal text-lg"
                       >Phone Number</label
                     >
-                    <span v-if="errors?.phoneNumber" class="text-red-500 text-xs">
+                    <span
+                      v-if="errors?.phoneNumber"
+                      class="text-red-500 text-xs">
                       {{ errors.phoneNumber }}
                     </span>
                   </div>
@@ -77,15 +82,12 @@
           </form>
 
           <div class="flex items-center justify-end gap-2 mt-8">
-            <pr-button
-              label="Reset"
-              class="w-[150px]"
-              @click="resetForm"/>
+            <pr-button label="Reset" class="w-[150px]" @click="resetForm" />
             <pr-button
               label="Update Profile"
               class="w-[150px]"
               :loading="isLoading"
-              @click="submitForm"/>
+              @click="submitForm" />
           </div>
         </div>
       </div>
@@ -94,28 +96,26 @@
         <div class="flex-1 w-full">
           <h2 class="text-xl font-semibold mb-3">Security Settings</h2>
           <div
-            class="bg-white 
-            dark:bg-dark-100 
-            flex-1 px-4 py-3 border 
-            border-[var(--color-border-300)] 
-            dark:border-[var(--p-content-border-color)] 
-            rounded-lg shadow-sm
-            shadow-[rgba(0, 0, 0, 0.1)]">
+            class="bg-white dark:bg-dark-100 flex-1 px-4 py-3 border border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)] rounded-lg shadow-sm shadow-[rgba(0, 0, 0, 0.1)]">
             <div class="flex items-center gap-4 justify-between">
               <p class="text-xl font-semibold">Two-Factor Authentication</p>
               <pr-input-switch
-              class="w-[50px]"
-              v-model="isTwoFactorEnabled"
-              :checked="isTwoFactorEnabled"
-              @change="toggleTwoFactorAuthentication" />
+                class="w-[50px]"
+                v-model="isTwoFactorEnabled"
+                :checked="isTwoFactorEnabled"
+                @change="toggleTwoFactorAuthentication" />
             </div>
-            <p class="text-gray-500 dark:text-gray-200">Add an extra layer of security</p>
+            <p class="text-gray-500 dark:text-gray-200">
+              Add an extra layer of security
+            </p>
 
             <form @submit.prevent="submitForm">
               <div class="flex flex-col items-center gap-7 py-3 flex-wrap">
                 <div class="w-full">
                   <div class="flex justify-between">
-                    <label for="password" class="font-normal text-lg">Password</label>
+                    <label for="password" class="font-normal text-lg"
+                      >Password</label
+                    >
                     <span v-if="errors?.password" class="text-red-500 text-xs">
                       {{ errors.password }}
                     </span>
@@ -131,8 +131,12 @@
                 <div class="flex gap-4 flex-1 w-full">
                   <div class="w-full">
                     <div class="flex justify-between">
-                      <label for="newPassword" class="font-normal text-lg">New Password</label>
-                      <span v-if="errors?.newPassword" class="text-red-500 text-xs">
+                      <label for="newPassword" class="font-normal text-lg"
+                        >New Password</label
+                      >
+                      <span
+                        v-if="errors?.newPassword"
+                        class="text-red-500 text-xs">
                         {{ errors.newPassword }}
                       </span>
                     </div>
@@ -148,7 +152,9 @@
                       <label for="confirmPassword" class="font-normal text-lg"
                         >Confirm Password</label
                       >
-                      <span v-if="errors?.confirmPassword" class="text-red-500 text-xs">
+                      <span
+                        v-if="errors?.confirmPassword"
+                        class="text-red-500 text-xs">
                         {{ errors.confirmPassword }}
                       </span>
                     </div>
@@ -168,20 +174,14 @@
                 label="Update Profile"
                 class="w-[150px] mb-4"
                 :loading="isLoading"
-                @click="submitForm"/>
+                @click="submitForm" />
             </div>
           </div>
         </div>
         <div class="flex-1 w-full">
           <h2 class="text-xl font-semibold mb-3">User Role Information</h2>
           <div
-            class="bg-white 
-            dark:bg-dark-100 
-            flex-1 px-4 py-2 border 
-            border-[var(--color-border-300)] 
-            dark:border-[var(--p-content-border-color)] 
-            rounded-lg shadow-sm
-            shadow-[rgba(0, 0, 0, 0.1)]">
+            class="bg-white dark:bg-dark-100 flex-1 px-4 py-2 border border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)] rounded-lg shadow-sm shadow-[rgba(0, 0, 0, 0.1)]">
             <p class="font-normal text-lg pb-3">Current Role</p>
             <pr-select
               v-model="selectedRole"
@@ -191,9 +191,8 @@
               placeholder="Select Role" />
 
             <p class="font-normal text-lg mt-12">Permissions</p>
-            <ul class="p-4 line list-disc 
-              list-inside py-3 pb-12
-              text-gray-500 dark:text-gray-200 text-lg">
+            <ul
+              class="p-4 line list-disc list-inside py-3 pb-12 text-gray-500 dark:text-gray-200 text-lg">
               <li>View energy consumption</li>
               <li>Manage billing and payments</li>
               <li>Share and transfer units</li>
@@ -212,9 +211,9 @@
   import { useToast } from "primevue/usetoast";
   import { useUserStore } from "@/store/user";
   import { useField, useForm } from "vee-validate";
-import { useAuthStore } from "@/store/auth";
-import { useMutation, useQuery, useQueryCache } from "@pinia/colada";
-import { UpdateUserRequest } from "@/types/auth";
+  import { useAuthStore } from "@/store/auth";
+  import { useMutation, useQuery, useQueryCache } from "@pinia/colada";
+  import { UpdateUserRequest } from "@/types/auth";
 
   const userStore = useUserStore();
   const toast = useToast();
@@ -235,7 +234,7 @@ import { UpdateUserRequest } from "@/types/auth";
       phoneNumber: yup.string().required().label("Phone Number"),
       password: yup.string().required().label("Password"),
       newpassword: yup.string().required().label("New Password"),
-      confirmPassword: yup.string().required().label("Confirm Password"),
+      confirmPassword: yup.string().required().label("Confirm Password")
     })
   });
 
@@ -249,8 +248,7 @@ import { UpdateUserRequest } from "@/types/auth";
 
   const { state, refetch } = useQuery({
     key: ["users"],
-    query: () =>
-      userStore.fetchUserById(authStore.userId as string),
+    query: () => userStore.fetchUserById(authStore.userId as string)
   });
 
   const { mutate, isLoading } = useMutation({
@@ -283,7 +281,7 @@ import { UpdateUserRequest } from "@/types/auth";
       firstName: values.firstName,
       lastName: values.lastName,
       email: values.email,
-      phoneNumber: values.phoneNumber,
+      phoneNumber: values.phoneNumber
     };
     mutate(userData);
   });

@@ -5,9 +5,9 @@
       <h1 class="text-2xl font-bold mr-15 text-[#0084FF]">SmartEM</h1>
       <h1 class="font-semibold text-4xl ml-15">{{ routeName }}</h1>
     </header>
-    <div class="flex gap-3 items-center">      
+    <div class="flex gap-3 items-center">
       <div class="text-[#0084FF] text-2xl font-medium">
-        {{ firstName ? 'Welcome' : '' }}
+        {{ firstName ? "Welcome" : "" }}
         <span class="font-bold">{{ firstName }}</span>
       </div>
 
@@ -19,7 +19,6 @@
 
       <!-- Notification with dropdown-->
       <div class="relative group">
-
         <button
           class="relative cursor-pointer w-10 h-10 rounded-full bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center"
           @click="openNotifications">
@@ -196,7 +195,7 @@
   import { useRoute } from "vue-router";
   import { useAuthStore } from "@/store/auth";
   import { useToast } from "primevue/usetoast";
-import { logoIcon } from "@/components/icon-assets/icons";
+  import { logoIcon } from "@/components/icon-assets/icons";
   const route = useRoute();
   const authStore = useAuthStore();
   const toast = useToast();
@@ -237,9 +236,7 @@ import { logoIcon } from "@/components/icon-assets/icons";
     return authStore.user?.imageUrl || null;
   });
 
-  const toggletheme = () => {
-
-  }
+  const toggletheme = () => {};
 
   // Handle logout
   const handleLogout = async () => {
