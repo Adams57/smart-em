@@ -10,9 +10,7 @@
             <div class="flex flex-col items-center gap-5 flex-wrap">
               <div class="w-full">
                 <div class="flex justify-between">
-                  <label
-                    for="recipientMeterId"
-                    class="font-medium text-[16px]"
+                  <label for="recipientMeterId" class="font-medium text-[16px]"
                     >Recipient Meter ID</label
                   >
                   <span
@@ -35,9 +33,7 @@
                   <label for="unitsToSend" class="font-medium text-[16px]"
                     >Amount of Units to Send</label
                   >
-                  <span
-                    v-if="errors?.unitsToSend"
-                    class="text-red-500 text-xs">
+                  <span v-if="errors?.unitsToSend" class="text-red-500 text-xs">
                     {{ errors.unitsToSend }}
                   </span>
                 </div>
@@ -52,9 +48,7 @@
 
               <div class="w-full">
                 <div class="flex justify-between">
-                  <label
-                    for="equivalentsAmount"
-                    class="font-medium text-[16px]"
+                  <label for="equivalentsAmount" class="font-medium text-[16px]"
                     >Equivalents Amount</label
                   >
                   <span
@@ -116,10 +110,7 @@
           </div>
 
           <div class="flex items-center justify-end mt-34.5">
-            <pr-button
-              label="Configure"
-              class="w-[170px]"
-              @click="configure" />
+            <pr-button label="Configure" class="w-[170px]" @click="configure" />
           </div>
         </div>
       </div>
@@ -158,10 +149,7 @@
           </div>
 
           <div class="flex items-center justify-end mt-13.5">
-            <pr-button
-              label="Configure"
-              class="w-[170px]"
-              @click="configure" />
+            <pr-button label="Configure" class="w-[170px]" @click="configure" />
           </div>
         </div>
       </div>
@@ -175,140 +163,154 @@
         </pr-tab-list>
         <pr-tab-panels>
           <pr-tab-panel :value="0">
-            <div
-                class="flex-1 mx-[-18px] mt-[-15px] px-4 py-6 card-color">
-                  <div
-                      class="flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
-                      <div>
-                          <p class="font-medium text-[16px]">Sent to MTR-78854125</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                          August 10, 2015
-                          </p>
-                      </div>
-                      <div>
-                          <p class="font-medium text-[16px]">50kWh</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                            ₦10,000
-                          </p>
-                      </div>
-                  </div>
-
-                  <div
-                      class="mt-3 flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
-                      <div>
-                          <p class="font-medium text-[16px]">Sent to MKT-45578120</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                          July 6, 2015
-                          </p>
-                      </div>
-                      <div>
-                          <p class="font-medium text-[16px]">65kWh</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                            ₦13,000
-                          </p>
-                      </div>
-                  </div>
-
-                  <div
-                      class="mt-3 flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
-                      <div>
-                          <p class="font-medium text-[16px]">Sent to MKT-45578120</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                          July 6, 2015
-                          </p>
-                      </div>
-                      <div>
-                          <p class="font-medium text-[16px]">10kWh</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                            ₦22,000
-                          </p>
-                      </div>
-                  </div>
-
-                  <div
-                      class="mt-3 flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
-                      <div>
-                          <p class="font-medium text-[16px]">Sent to MKT-45578120</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                          July 6, 2015
-                          </p>
-                      </div>
-                      <div>
-                          <p class="font-medium text-[16px]">30kWh</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                            ₦7,500
-                          </p>
-                      </div>
-                  </div>
+            <div class="flex-1 mx-[-18px] mt-[-15px] px-4 py-6 card-color">
+              <div
+                class="flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
+                <div>
+                  <p class="font-medium text-[16px]">Sent to MTR-78854125</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    August 10, 2015
+                  </p>
+                </div>
+                <div>
+                  <p class="font-medium text-[16px]">50kWh</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    ₦10,000
+                  </p>
+                </div>
               </div>
+
+              <div
+                class="mt-3 flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
+                <div>
+                  <p class="font-medium text-[16px]">Sent to MKT-45578120</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    July 6, 2015
+                  </p>
+                </div>
+                <div>
+                  <p class="font-medium text-[16px]">65kWh</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    ₦13,000
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="mt-3 flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
+                <div>
+                  <p class="font-medium text-[16px]">Sent to MKT-45578120</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    July 6, 2015
+                  </p>
+                </div>
+                <div>
+                  <p class="font-medium text-[16px]">10kWh</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    ₦22,000
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="mt-3 flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
+                <div>
+                  <p class="font-medium text-[16px]">Sent to MKT-45578120</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    July 6, 2015
+                  </p>
+                </div>
+                <div>
+                  <p class="font-medium text-[16px]">30kWh</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    ₦7,500
+                  </p>
+                </div>
+              </div>
+            </div>
           </pr-tab-panel>
           <pr-tab-panel :value="1">
-            <div
-                class="flex-1 mx-[-18px] mt-[-15px] px-4 py-6 card-color">
-                  <div
-                      class="flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
-                      <div>
-                          <p class="font-medium text-[16px]">Sent to MTR-78854125</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                          August 10, 2015
-                          </p>
-                      </div>
-                      <div>
-                          <p class="font-medium text-[16px]">50kWh</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                            ₦10,000
-                          </p>
-                      </div>
-                  </div>
-
-                  <div
-                      class="mt-3 flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
-                      <div>
-                          <p class="font-medium text-[16px]">Sent to MKT-45578120</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                          July 6, 2015
-                          </p>
-                      </div>
-                      <div>
-                          <p class="font-medium text-[16px]">65kWh</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                            ₦13,000
-                          </p>
-                      </div>
-                  </div>
-
-                  <div
-                      class="mt-3 flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
-                      <div>
-                          <p class="font-medium text-[16px]">Sent to MKT-45578120</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                          July 6, 2015
-                          </p>
-                      </div>
-                      <div>
-                          <p class="font-medium text-[16px]">10kWh</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                            ₦22,000
-                          </p>
-                      </div>
-                  </div>
-
-                  <div
-                      class="mt-3 flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
-                      <div>
-                          <p class="font-medium text-[16px]">Sent to MKT-45578120</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                          July 6, 2015
-                          </p>
-                      </div>
-                      <div>
-                          <p class="font-medium text-[16px]">30kWh</p>
-                          <p class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
-                            ₦7,500
-                          </p>
-                      </div>
-                  </div>
+            <div class="flex-1 mx-[-18px] mt-[-15px] px-4 py-6 card-color">
+              <div
+                class="flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
+                <div>
+                  <p class="font-medium text-[16px]">Sent to MTR-78854125</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    August 10, 2015
+                  </p>
+                </div>
+                <div>
+                  <p class="font-medium text-[16px]">50kWh</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    ₦10,000
+                  </p>
+                </div>
               </div>
+
+              <div
+                class="mt-3 flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
+                <div>
+                  <p class="font-medium text-[16px]">Sent to MKT-45578120</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    July 6, 2015
+                  </p>
+                </div>
+                <div>
+                  <p class="font-medium text-[16px]">65kWh</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    ₦13,000
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="mt-3 flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
+                <div>
+                  <p class="font-medium text-[16px]">Sent to MKT-45578120</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    July 6, 2015
+                  </p>
+                </div>
+                <div>
+                  <p class="font-medium text-[16px]">10kWh</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    ₦22,000
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="mt-3 flex items-center justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
+                <div>
+                  <p class="font-medium text-[16px]">Sent to MKT-45578120</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    July 6, 2015
+                  </p>
+                </div>
+                <div>
+                  <p class="font-medium text-[16px]">30kWh</p>
+                  <p
+                    class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+                    ₦7,500
+                  </p>
+                </div>
+              </div>
+            </div>
           </pr-tab-panel>
         </pr-tab-panels>
       </pr-tabs>
@@ -339,7 +341,7 @@
         .number()
         .required()
         .label("Equivalents Amount")
-        .min(1, "Equivalents Amount must be at least ₦1.00"),
+        .min(1, "Equivalents Amount must be at least ₦1.00")
     })
   });
 
@@ -365,28 +367,28 @@
 </script>
 
 <style scoped>
-:deep(.p-tablist-tab-list) {
+  :deep(.p-tablist-tab-list) {
     background-color: transparent;
-}
+  }
 
-:deep(.p-tab-active) {
+  :deep(.p-tab-active) {
     background-color: white;
-}
+  }
 
-:deep(.p-tabpanels) {
+  :deep(.p-tabpanels) {
     border-radius: 10px;
     border-top-left-radius: 0px;
-}
+  }
 
-@media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: dark) {
     :deep(.p-tab-active) {
       background-color: var(--p-content-border-color);
     }
     :deep(.p-tablist-tab-list) {
-        background-color: transparent;
+      background-color: transparent;
     }
     .card-color {
-        background-color: var(--p-content-border-color);
+      background-color: var(--p-content-border-color);
     }
   }
 </style>

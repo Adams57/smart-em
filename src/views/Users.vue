@@ -233,18 +233,19 @@
       email: yup.string().required().label("Email"),
       lastName: yup.string().required().label("Other Name"),
       phoneNumber: yup.string().required().label("Phone Number"),
-      password: yup
-        .string()
-        .required("Password is required"),
+      password: yup.string().required("Password is required"),
       newpassword: yup
         .string()
         .required("New Password is required")
         .min(6, "New Password must be at least 6 characters")
-        .notOneOf([yup.ref("password")], "New Password must be different from current password"),
+        .notOneOf(
+          [yup.ref("password")],
+          "New Password must be different from current password"
+        ),
       confirmPassword: yup
         .string()
         .required("Confirm Password is required")
-        .oneOf([yup.ref("newpassword")], "Passwords must match"),
+        .oneOf([yup.ref("newpassword")], "Passwords must match")
     })
   });
 
@@ -273,7 +274,8 @@
       toast.add({
         severity: "success",
         summary: "User updated",
-        detail: isUpdating.value ? "User has been updated successfully"
+        detail: isUpdating.value
+          ? "User has been updated successfully"
           : "Password has been changed successfully",
         life: 3000
       });
@@ -284,7 +286,8 @@
       toast.add({
         severity: "error",
         summary: "Error",
-        detail: isUpdating.value ? "Failed to update user"
+        detail: isUpdating.value
+          ? "Failed to update user"
           : "Failed to change password",
         life: 3000
       });
@@ -307,7 +310,7 @@
   const changePassword = handleSubmit(async (values) => {
     const userData: ChangePassword = {
       oldPassword: values.password,
-      newPassword: values.newPassword,
+      newPassword: values.newPassword
     };
     isUpdating.value = false;
     mutate(userData);

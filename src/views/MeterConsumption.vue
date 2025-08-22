@@ -1,7 +1,7 @@
 <template>
   <div
     class="px-7 py-4 h-full flex flex-col gap-3 border border-[var(--color-border-300)] bg-[#F6F6F6] dark:bg-dark-200 dark:border-[var(--p-content-border-color)]">
-    <div class="grid grid-cols-1 xl:grid-cols-4 gap-7 ">
+    <div class="grid grid-cols-1 xl:grid-cols-4 gap-7">
       <div class="xl:col-span-2">
         <h2 class="text-xl font-semibold mb-3">Security Settings</h2>
         <div
@@ -142,8 +142,7 @@
           </div>
           <pr-toggle-switch v-model="isWeeklyLimitEnabled" class="mr-5" />
         </div>
-        <div
-          class="flex items-center justify-between">
+        <div class="flex items-center justify-between">
           <div>
             <p class="text-lg">Monthly Limit Alert</p>
             <p class="text-sm mt-[-5px] mb-1 text-[#BCBCBC] dark:text-gray-300">
@@ -176,7 +175,7 @@
 
   const { value: meterId } = useField("meterId");
   const { value: meterType } = useField("meterType");
-  
+
   const submitForm = handleSubmit(async (values) => {
     console.log("Form submitted with values:", values);
     // Here you would typically send the data to your API
