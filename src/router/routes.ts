@@ -37,7 +37,25 @@ export const ROUTES = Object.freeze({
 
   USERS: {
     path: "/users",
-    name: "Users",
-    component: () => import("@/views/users/Users.vue")
+    name: "User Account",
+    component: () => import("@/views/Users.vue")
+  },
+
+  METER_CONSUMPTION: {
+    path: "/meter-consumption",
+    name: "Meter & Consumption",
+    component: () => import("@/views/MeterConsumption.vue")
+  },
+
+  BILLING_PAYMENTS: {
+    path: "/billing-payments",
+    name: "Billing & Payments",
+    component: () => import("@/views/BillingPayments.vue")
+  },
+
+  UNITS_SHARING: {
+    path: "/units-sharing",
+    name: "Units Sharing",
+    component: () => import("@/views/UnitsSharing.vue")
   }
 });

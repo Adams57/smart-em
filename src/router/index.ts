@@ -47,6 +47,24 @@ const routes: RouteRecordRaw[] = [
         name: ROUTES.USERS.name,
         component: ROUTES.USERS.component,
         meta: { requiresAuth: true }
+      },
+      {
+        path: ROUTES.METER_CONSUMPTION.path,
+        name: ROUTES.METER_CONSUMPTION.name,
+        component: ROUTES.METER_CONSUMPTION.component,
+        meta: { requiresAuth: true }
+      },
+      {
+        path: ROUTES.BILLING_PAYMENTS.path,
+        name: ROUTES.BILLING_PAYMENTS.name,
+        component: ROUTES.BILLING_PAYMENTS.component,
+        meta: { requiresAuth: true }
+      },
+      {
+        path: ROUTES.UNITS_SHARING.path,
+        name: ROUTES.UNITS_SHARING.name,
+        component: ROUTES.UNITS_SHARING.component,
+        meta: { requiresAuth: true }
       }
     ]
   }

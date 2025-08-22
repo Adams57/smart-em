@@ -28,22 +28,17 @@
           title="Meter & Consumption"
           icon="fa-qrcode"
           :collapsed="isCollapsed"
-          :route="'/home'" />
+          :route="ROUTES.METER_CONSUMPTION.path" />
         <dashboard-link
           title="Billing & Payments"
           icon="fa-qrcode"
           :collapsed="isCollapsed"
-          :route="'/home'" />
-        <dashboard-link
-          title="Complaints & Support"
-          icon="fa-qrcode"
-          :collapsed="isCollapsed"
-          :route="'/home'" />
+          :route="ROUTES.BILLING_PAYMENTS.path" />
         <dashboard-link
           title="Units Sharing"
           icon="fa-qrcode"
           :collapsed="isCollapsed"
-          :route="'/home'" />
+          :route="ROUTES.UNITS_SHARING.path" />
         <dashboard-link
           title="Unit Portability"
           icon="fa-qrcode"
@@ -60,7 +55,17 @@
           :collapsed="isCollapsed"
           :route="'/home'" />
         <dashboard-link
+          title="Complaints & Support"
+          icon="fa-qrcode"
+          :collapsed="isCollapsed"
+          :route="'/home'" />
+        <dashboard-link
           title="User Simulator"
+          icon="fa-qrcode"
+          :collapsed="isCollapsed"
+          :route="'/home'" />
+        <dashboard-link
+          title="Settings"
           icon="fa-qrcode"
           :collapsed="isCollapsed"
           :route="'/home'" />

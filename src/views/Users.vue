@@ -8,7 +8,7 @@
           class="bg-white dark:bg-dark-100 flex-1 px-4 py-3 border border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)] rounded-lg shadow-sm shadow-[rgba(0, 0, 0, 0.1)]">
           <p class="font-semibold mb-3">Profile Information</p>
           <form @submit.prevent="submitForm">
-            <div class="flex items-center gap-7 py-6 flex-wrap">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-7 py-6">
               <div class="flex flex-col gap-4 flex-1">
                 <div>
                   <div class="flex justify-between">
@@ -81,7 +81,7 @@
             </div>
           </form>
 
-          <div class="flex items-center justify-end gap-2 mt-8">
+          <div class="flex items-center justify-end gap-2 mt-5 mb-3">
             <pr-button label="Reset" class="w-[150px]" @click="resetForm" />
             <pr-button
               label="Update Profile"
@@ -99,7 +99,7 @@
             class="bg-white dark:bg-dark-100 flex-1 px-4 py-3 border border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)] rounded-lg shadow-sm shadow-[rgba(0, 0, 0, 0.1)]">
             <div class="flex items-center gap-4 justify-between">
               <p class="text-xl font-semibold">Two-Factor Authentication</p>
-              <pr-input-switch
+              <pr-toggle-switch
                 class="w-[50px]"
                 v-model="isTwoFactorEnabled"
                 :checked="isTwoFactorEnabled"
@@ -109,7 +109,7 @@
               Add an extra layer of security
             </p>
 
-            <form @submit.prevent="submitForm">
+            <form @submit.prevent="changePassword">
               <div class="flex flex-col items-center gap-7 py-3 flex-wrap">
                 <div class="w-full">
                   <div class="flex justify-between">
@@ -128,7 +128,7 @@
                     placeholder="**********" />
                 </div>
 
-                <div class="flex gap-4 flex-1 w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                   <div class="w-full">
                     <div class="flex justify-between">
                       <label for="newPassword" class="font-normal text-lg"
@@ -171,10 +171,10 @@
 
             <div class="flex items-center justify-end mt-8">
               <pr-button
-                label="Update Profile"
-                class="w-[150px] mb-4"
+                label="Change Password"
+                class="w-[170px] mb-4"
                 :loading="isLoading"
-                @click="submitForm" />
+                @click="changePassword" />
             </div>
           </div>
         </div>
@@ -213,7 +213,7 @@
   import { useField, useForm } from "vee-validate";
   import { useAuthStore } from "@/store/auth";
   import { useMutation, useQuery, useQueryCache } from "@pinia/colada";
-  import { UpdateUserRequest } from "@/types/auth";
+  import { ChangePassword, UpdateUserRequest } from "@/types/auth";
 
   const userStore = useUserStore();
   const toast = useToast();
@@ -221,6 +221,7 @@
   const queryCache = useQueryCache();
 
   const isTwoFactorEnabled = ref(false);
+  const isUpdating = ref(false);
   const selectedRole = ref("Standard User");
   const isDark = ref(
     window.matchMedia?.("(prefers-color-scheme: dark)").matches
@@ -232,9 +233,18 @@
       email: yup.string().required().label("Email"),
       lastName: yup.string().required().label("Other Name"),
       phoneNumber: yup.string().required().label("Phone Number"),
-      password: yup.string().required().label("Password"),
-      newpassword: yup.string().required().label("New Password"),
-      confirmPassword: yup.string().required().label("Confirm Password")
+      password: yup
+        .string()
+        .required("Password is required"),
+      newpassword: yup
+        .string()
+        .required("New Password is required")
+        .min(6, "New Password must be at least 6 characters")
+        .notOneOf([yup.ref("password")], "New Password must be different from current password"),
+      confirmPassword: yup
+        .string()
+        .required("Confirm Password is required")
+        .oneOf([yup.ref("newpassword")], "Passwords must match"),
     })
   });
 
@@ -252,26 +262,33 @@
   });
 
   const { mutate, isLoading } = useMutation({
-    mutation: async (payload: UpdateUserRequest) => {
-      await userStore.updateUser(payload as UpdateUserRequest);
+    mutation: async (payload: UpdateUserRequest | ChangePassword) => {
+      if (!isUpdating.value) {
+        return await authStore.changePassword(payload as ChangePassword);
+      }
+      return await userStore.updateUser(payload as UpdateUserRequest);
     },
     onSuccess: () => {
       queryCache.invalidateQueries({ key: ["users"] });
       toast.add({
         severity: "success",
         summary: "User updated",
-        detail: "User has been updated successfully",
+        detail: isUpdating.value ? "User has been updated successfully"
+          : "Password has been changed successfully",
         life: 3000
       });
+      isUpdating.value = false;
       refetch();
     },
     onError: () => {
       toast.add({
         severity: "error",
         summary: "Error",
-        detail: "Failed to update user",
+        detail: isUpdating.value ? "Failed to update user"
+          : "Failed to change password",
         life: 3000
       });
+      isUpdating.value = false;
     }
   });
 
@@ -283,6 +300,16 @@
       email: values.email,
       phoneNumber: values.phoneNumber
     };
+    isUpdating.value = true;
+    mutate(userData);
+  });
+
+  const changePassword = handleSubmit(async (values) => {
+    const userData: ChangePassword = {
+      oldPassword: values.password,
+      newPassword: values.newPassword,
+    };
+    isUpdating.value = false;
     mutate(userData);
   });
 

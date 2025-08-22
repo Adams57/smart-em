@@ -19,6 +19,7 @@ interface State {
   accessToken: string | null;
   tokenExpiration: number | null;
   logoutTimer: ReturnType<typeof setTimeout> | null;
+  isDarkMode: boolean;
 }
 
 const decodeJwt = (token: string): JwtPayload | null => {
@@ -41,7 +42,8 @@ export const useAuthStore = defineStore("auth", {
     user: null,
     accessToken: null,
     tokenExpiration: null,
-    logoutTimer: null
+    logoutTimer: null,
+    isDarkMode: false
   }),
 
   getters: {
