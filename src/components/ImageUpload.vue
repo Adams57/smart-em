@@ -56,15 +56,17 @@
     }
     const reader = new FileReader();
     reader.onload = () => {
-      uploadedImage.value = reader.result;
+      uploadedImage.value = reader.result as string | null;
     };
     reader.readAsDataURL(file);
   }
 
-  function handleDrop(event) {
+  function handleDrop(event: DragEvent) {
     event.preventDefault();
-    const file = event.dataTransfer.files[0];
-    handleFile(file);
+    const file = event?.dataTransfer?.files[0];
+    if (file) {
+      handleFile(file);
+    }
   }
 
   const removeUserImage = (): void => {

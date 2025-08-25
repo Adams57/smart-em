@@ -2,7 +2,7 @@ import { setActivePinia, createPinia } from "pinia";
 import { useAuthStore } from "@/store/auth";
 import ApiService from "@/api/index";
 import router from "@/router";
-import jwtDecode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import { vi, describe, it, expect, beforeEach, Mock } from "vitest";
 import { ROUTES } from "@/router/routes";
 
