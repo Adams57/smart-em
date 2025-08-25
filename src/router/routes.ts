@@ -81,5 +81,5 @@ export const ROUTES = Object.freeze({
     path: "/complaints-support",
     name: "Complaints & Support",
     component: () => import("@/views/ComplaintsSupport.vue")
-  },
+  }
 });

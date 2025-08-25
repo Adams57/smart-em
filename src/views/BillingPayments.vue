@@ -1,6 +1,5 @@
 <template>
-  <div
-    class="p-6 flex flex-col gap-10">
+  <div class="p-6 flex flex-col gap-10">
     <div>
       <h2 class="text-xl font-semibold mb-3">Overview</h2>
       <div class="flex flex-wrap gap-9">

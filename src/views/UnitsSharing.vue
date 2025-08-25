@@ -1,6 +1,5 @@
 <template>
-  <div
-    class="py-5 px-7 flex flex-col gap-5">
+  <div class="py-5 px-7 flex flex-col gap-5">
     <div class="grid grid-cols-1 xl:grid-cols-2 gap-7">
       <div class="flex-1 w-full">
         <h2 class="text-xl font-semibold mb-3">Share Units</h2>

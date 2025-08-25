@@ -1,6 +1,5 @@
 <template>
-  <div
-    class="p-7 flex flex-col gap-6">
+  <div class="p-7 flex flex-col gap-6">
     <div>
       <div class="flex-1 flex flex-col flex-wrap">
         <h2 class="text-xl font-semibold mb-3">Profile Management</h2>
@@ -146,7 +145,9 @@
       <h2 class="text-xl font-semibold mb-3">Transfer History</h2>
       <div
         class="bg-white dark:bg-dark-100 flex-1 px-4 py-4 border border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)] rounded-lg shadow-sm shadow-[rgba(0, 0, 0, 0.1)]">
-        <div v-for="value in transferHistory" :key="value.title"
+        <div
+          v-for="value in transferHistory"
+          :key="value.title"
           class="flex items-center mt-2 justify-between border-b-1 border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)]">
           <div>
             <p class="font-medium text-[16px]">{{ value.title }}</p>
@@ -163,11 +164,13 @@
             </p>
           </div>
           <div>
-            <p class="font-medium text-[16px]"
-              :style="{ color: value.statusColor }">{{ value.status }}</p>
             <p
-              class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300">
+              class="font-medium text-[16px]"
+              :style="{ color: value.statusColor }">
+              {{ value.status }}
             </p>
+            <p
+              class="font-medium text-[16px] mt-[-5px] mb-3 text-[#BCBCBC] dark:text-gray-300"></p>
           </div>
         </div>
       </div>

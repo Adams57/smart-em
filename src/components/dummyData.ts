@@ -213,11 +213,12 @@ export const recentNotifications = [
   },
   {
     subject: "Maintenance Notice",
-    message: "Scheduled maintenance on Feb 5th from 2-4 AM. Brief service interruption expected.",
+    message:
+      "Scheduled maintenance on Feb 5th from 2-4 AM. Brief service interruption expected.",
     time: "3 days ago",
     icon: "bi-bell",
     color: "#0084FF"
-  },
+  }
 ];
 
 export const tickets = [
@@ -256,5 +257,5 @@ export const tickets = [
     date: "Created: Aug. 20, 2025",
     status: "Unattended",
     color: "#DB0000"
-  },
-]
+  }
+];

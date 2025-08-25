@@ -1,6 +1,5 @@
 <template>
-  <div
-    class="p-7 overflow-y-auto flex flex-col gap-6">
+  <div class="p-7 overflow-y-auto flex flex-col gap-6">
     <div>
       <div class="flex-1 flex flex-col flex-wrap">
         <h2 class="text-xl font-semibold mb-3">Profile Management</h2>
@@ -28,7 +27,9 @@
                 </div>
                 <div>
                   <div class="flex justify-between">
-                    <label for="email" class="font-medium text-[16px]">Email</label>
+                    <label for="email" class="font-medium text-[16px]"
+                      >Email</label
+                    >
                     <span v-if="errors?.email" class="text-red-500 text-xs">
                       {{ errors.email }}
                     </span>
@@ -149,7 +150,9 @@
                   </div>
                   <div class="w-full">
                     <div class="flex justify-between">
-                      <label for="confirmPassword" class="font-medium text-[16px]"
+                      <label
+                        for="confirmPassword"
+                        class="font-medium text-[16px]"
                         >Confirm Password</label
                       >
                       <span

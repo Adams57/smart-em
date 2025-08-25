@@ -5,11 +5,8 @@
       <DashboardTopBar />
       <div class="flex-1 flex">
         <DashboardSidebar />
-        <main class="flex-1 overflow-y-auto flex flex-col 
-          border border-[var(--color-border-300)] 
-          bg-[#F6F6F6] dark:bg-dark-200 
-          dark:border-[var(--p-content-border-color)]
-          h-[calc(100vh-80px)] md-[calc(100vh)-120px]">
+        <main
+          class="flex-1 overflow-y-auto flex flex-col border border-[var(--color-border-300)] bg-[#F6F6F6] dark:bg-dark-200 dark:border-[var(--p-content-border-color)] h-[calc(100vh-80px)] md-[calc(100vh)-120px]">
           <router-view />
         </main>
       </div>

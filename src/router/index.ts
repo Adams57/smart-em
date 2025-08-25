@@ -89,7 +89,7 @@ const routes: RouteRecordRaw[] = [
         name: ROUTES.COMPLAINTS_SUPPORT.name,
         component: ROUTES.COMPLAINTS_SUPPORT.component,
         meta: { requiresAuth: true }
-      },
+      }
     ]
   }
 ];
