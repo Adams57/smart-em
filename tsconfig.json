@@ -9,10 +9,11 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "noEmit": true
   },
 
-  "include": ["src/**/*.ts", "src/**/*.vue", "index.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.vue"],
   "exclude": ["node_modules"],
   "files": [],
   "references": [{ "path": "./tsconfig.node.json" }]
