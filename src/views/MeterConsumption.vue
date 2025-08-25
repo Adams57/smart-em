@@ -1,6 +1,6 @@
 <template>
   <div
-    class="px-7 py-4 h-full flex flex-col gap-3 border border-[var(--color-border-300)] bg-[#F6F6F6] dark:bg-dark-200 dark:border-[var(--p-content-border-color)]">
+    class="px-7 py-4 flex flex-col gap-3">
     <div class="grid grid-cols-1 xl:grid-cols-4 gap-7">
       <div class="xl:col-span-2">
         <h2 class="text-xl font-semibold mb-3">Security Settings</h2>

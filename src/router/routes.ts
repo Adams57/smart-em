@@ -57,5 +57,29 @@ export const ROUTES = Object.freeze({
     path: "/units-sharing",
     name: "Units Sharing",
     component: () => import("@/views/UnitsSharing.vue")
-  }
+  },
+
+  UNITS_PORTABILITY: {
+    path: "/units-portability",
+    name: "Units Portability",
+    component: () => import("@/views/UnitsPortability.vue")
+  },
+
+  NOTIFICATION_ALERTS: {
+    path: "/notification-alerts",
+    name: "Notification & Alerts",
+    component: () => import("@/views/NotificationAlerts.vue")
+  },
+
+  REMOTE_CONTROL: {
+    path: "/remote-control",
+    name: "Remote Control",
+    component: () => import("@/views/RemoteControl.vue")
+  },
+
+  COMPLAINTS_SUPPORT: {
+    path: "/complaints-support",
+    name: "Complaints & Support",
+    component: () => import("@/views/ComplaintsSupport.vue")
+  },
 });

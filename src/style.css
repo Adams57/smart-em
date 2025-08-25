@@ -3,6 +3,7 @@
 :root {
   --p-primary-color: #0c8ce9 !important;
   --p-primary-hover-color: #2e95df !important;
+  /* --p-content-border-color: rgb(37, 36, 36) !important; */
 
   --p-primary-hover-color: var(--p-primary-color) !important;
   --p-primary-active-color: var(--p-primary-color) !important;
@@ -90,6 +91,10 @@
     background: #f8f3f3 !important;
     height: 19px !important;
     border-color: var(--p-toggleswitch-checked-border-color);
+  }
+
+  .p-button {
+    color: white !important;
   }
 }
 

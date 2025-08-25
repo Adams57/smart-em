@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-7 h-full flex flex-col gap-6 border border-[var(--color-border-300)] bg-[#F6F6F6] dark:bg-dark-200 dark:border-[var(--p-content-border-color)]">
+    class="p-7 overflow-y-auto flex flex-col gap-6">
     <div>
       <div class="flex-1 flex flex-col flex-wrap">
         <h2 class="text-xl font-semibold mb-3">Profile Management</h2>
@@ -12,7 +12,7 @@
               <div class="flex flex-col gap-4 flex-1">
                 <div>
                   <div class="flex justify-between">
-                    <label for="firstName" class="font-normal text-lg"
+                    <label for="firstName" class="font-medium text-[16px]"
                       >First Name</label
                     >
                     <span v-if="errors?.firstName" class="text-red-500 text-xs">
@@ -28,7 +28,7 @@
                 </div>
                 <div>
                   <div class="flex justify-between">
-                    <label for="email" class="font-normal text-lg">Email</label>
+                    <label for="email" class="font-medium text-[16px]">Email</label>
                     <span v-if="errors?.email" class="text-red-500 text-xs">
                       {{ errors.email }}
                     </span>
@@ -45,7 +45,7 @@
               <div class="flex flex-col gap-4 flex-1">
                 <div>
                   <div class="flex justify-between">
-                    <label for="lastName" class="font-normal text-lg"
+                    <label for="lastName" class="font-medium text-[16px]"
                       >Other Name</label
                     >
                     <span v-if="errors?.lastName" class="text-red-500 text-xs">
@@ -61,7 +61,7 @@
                 </div>
                 <div>
                   <div class="flex justify-between">
-                    <label for="phoneNumber" class="font-normal text-lg"
+                    <label for="phoneNumber" class="font-medium text-[16px]"
                       >Phone Number</label
                     >
                     <span
@@ -113,7 +113,7 @@
               <div class="flex flex-col items-center gap-7 py-3 flex-wrap">
                 <div class="w-full">
                   <div class="flex justify-between">
-                    <label for="password" class="font-normal text-lg"
+                    <label for="password" class="font-medium text-[16px]"
                       >Password</label
                     >
                     <span v-if="errors?.password" class="text-red-500 text-xs">
@@ -131,7 +131,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                   <div class="w-full">
                     <div class="flex justify-between">
-                      <label for="newPassword" class="font-normal text-lg"
+                      <label for="newPassword" class="font-medium text-[16px]"
                         >New Password</label
                       >
                       <span
@@ -149,7 +149,7 @@
                   </div>
                   <div class="w-full">
                     <div class="flex justify-between">
-                      <label for="confirmPassword" class="font-normal text-lg"
+                      <label for="confirmPassword" class="font-medium text-[16px]"
                         >Confirm Password</label
                       >
                       <span
@@ -182,7 +182,7 @@
           <h2 class="text-xl font-semibold mb-3">User Role Information</h2>
           <div
             class="bg-white dark:bg-dark-100 flex-1 px-4 py-2 border border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)] rounded-lg shadow-sm shadow-[rgba(0, 0, 0, 0.1)]">
-            <p class="font-normal text-lg pb-3">Current Role</p>
+            <p class="font-medium text-[16px] pb-3">Current Role</p>
             <pr-select
               v-model="selectedRole"
               :options="['Standard User', 'Admin', 'Super Admin']"
@@ -190,7 +190,7 @@
               disabled
               placeholder="Select Role" />
 
-            <p class="font-normal text-lg mt-12">Permissions</p>
+            <p class="font-medium text-[16px] mt-12">Permissions</p>
             <ul
               class="p-4 line list-disc list-inside py-3 pb-12 text-gray-500 dark:text-gray-200 text-lg">
               <li>View energy consumption</li>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-7 h-full flex flex-col gap-6 border border-[var(--color-border-300)] bg-[#F6F6F6] dark:bg-dark-200 dark:border-[var(--p-content-border-color)]">
+    class="p-7 flex flex-col gap-6">
     <div class="flex flex-wrap gap-6">
       <div
         class="bg-white dark:bg-dark-100 flex-1 px-4 py-3 border border-[var(--color-border-300)] dark:border-[var(--p-content-border-color)] rounded-lg shadow-sm shadow-[rgba(0, 0, 0, 0.1)]">

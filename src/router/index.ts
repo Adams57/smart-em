@@ -65,7 +65,31 @@ const routes: RouteRecordRaw[] = [
         name: ROUTES.UNITS_SHARING.name,
         component: ROUTES.UNITS_SHARING.component,
         meta: { requiresAuth: true }
-      }
+      },
+      {
+        path: ROUTES.UNITS_PORTABILITY.path,
+        name: ROUTES.UNITS_PORTABILITY.name,
+        component: ROUTES.UNITS_PORTABILITY.component,
+        meta: { requiresAuth: true }
+      },
+      {
+        path: ROUTES.NOTIFICATION_ALERTS.path,
+        name: ROUTES.NOTIFICATION_ALERTS.name,
+        component: ROUTES.NOTIFICATION_ALERTS.component,
+        meta: { requiresAuth: true }
+      },
+      {
+        path: ROUTES.REMOTE_CONTROL.path,
+        name: ROUTES.REMOTE_CONTROL.name,
+        component: ROUTES.REMOTE_CONTROL.component,
+        meta: { requiresAuth: true }
+      },
+      {
+        path: ROUTES.COMPLAINTS_SUPPORT.path,
+        name: ROUTES.COMPLAINTS_SUPPORT.name,
+        component: ROUTES.COMPLAINTS_SUPPORT.component,
+        meta: { requiresAuth: true }
+      },
     ]
   }
 ];

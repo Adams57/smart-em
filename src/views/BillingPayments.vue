@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-6 h-full flex flex-col gap-10 border border-[var(--color-border-300)] bg-[#F6F6F6] dark:bg-dark-200 dark:border-[var(--p-content-border-color)]">
+    class="p-6 flex flex-col gap-10">
     <div>
       <h2 class="text-xl font-semibold mb-3">Overview</h2>
       <div class="flex flex-wrap gap-9">

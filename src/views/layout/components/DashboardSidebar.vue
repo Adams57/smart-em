@@ -43,23 +43,23 @@
           title="Unit Portability"
           icon="fa-qrcode"
           :collapsed="isCollapsed"
-          :route="'/home'" />
+          :route="ROUTES.UNITS_PORTABILITY.path" />
         <dashboard-link
           title="Notification & Alerts"
           icon="fa-qrcode"
           :collapsed="isCollapsed"
-          :route="'/home'" />
+          :route="ROUTES.NOTIFICATION_ALERTS.path" />
         <dashboard-link
           title="Remote Control"
           icon="fa-qrcode"
           :collapsed="isCollapsed"
-          :route="'/home'" />
+          :route="ROUTES.REMOTE_CONTROL.path" />
         <dashboard-link
           title="Complaints & Support"
           icon="fa-qrcode"
           :collapsed="isCollapsed"
-          :route="'/home'" />
-        <dashboard-link
+          :route="ROUTES.COMPLAINTS_SUPPORT.path" />
+        <!-- <dashboard-link
           title="User Simulator"
           icon="fa-qrcode"
           :collapsed="isCollapsed"
@@ -68,7 +68,7 @@
           title="Settings"
           icon="fa-qrcode"
           :collapsed="isCollapsed"
-          :route="'/home'" />
+          :route="'/home'" /> -->
       </ul>
     </nav>
   </div>

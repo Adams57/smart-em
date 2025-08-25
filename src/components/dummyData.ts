@@ -160,3 +160,101 @@ export const demandSupplyOptions = (color: string) => ({
     }
   }
 });
+
+export const transferHistory = [
+  {
+    title: "Sent to MTR-78854125",
+    subTitle: "August 10, 2015",
+    unit: "50kWh",
+    amount: "₦10,000",
+    status: "Successful",
+    statusColor: "#12B76A"
+  },
+  {
+    title: "Sent to MKT-45578120",
+    subTitle: "July 6, 2015",
+    unit: "65kWh",
+    amount: "₦13,000",
+    status: "Successful",
+    statusColor: "#12B76A"
+  },
+  {
+    title: "Sent to MKT-45578120",
+    subTitle: "July 6, 2015",
+    unit: "10kWh",
+    amount: "₦22,000",
+    status: "Pending",
+    statusColor: "#FF8000"
+  },
+  {
+    title: "Sent to MKT-45578120",
+    subTitle: "July 6, 2015",
+    unit: "30kWh",
+    amount: "₦7,500",
+    status: "Successful",
+    statusColor: "#12B76A"
+  }
+];
+
+export const recentNotifications = [
+  {
+    subject: "Low Balance Warning",
+    message: "Your account balance is below $10 Consider recharging soon.",
+    time: "2 hour ago",
+    icon: "bi-check2-circle",
+    color: "#12B76A"
+  },
+  {
+    subject: "Payment Successful",
+    message: "Your payment of $50.00 has been proccessed successfully.",
+    time: "1 day ago",
+    icon: "bi-exclamation-triangle",
+    color: "#ffb900"
+  },
+  {
+    subject: "Maintenance Notice",
+    message: "Scheduled maintenance on Feb 5th from 2-4 AM. Brief service interruption expected.",
+    time: "3 days ago",
+    icon: "bi-bell",
+    color: "#0084FF"
+  },
+];
+
+export const tickets = [
+  {
+    subject: "My Support Tickets",
+    title: "Billing Discrepancy",
+    ticketId: "Ticket # 49485",
+    message: "Issue with January billing amount...",
+    date: "Created: Aug. 20, 2025",
+    status: "In progress",
+    color: "#DF7700"
+  },
+  {
+    subject: "Meter Reading Error",
+    title: "Billing Discrepancy",
+    ticketId: "Ticket # 25548879",
+    message: "Smart meter showing incorrect readings...",
+    date: "Created: Aug. 25, 2025",
+    status: "Resolved",
+    color: "#008724"
+  },
+  {
+    subject: "Unit Rejection",
+    title: "Unverified Unit",
+    ticketId: "Ticket # 25540009",
+    message: "Smart meter showing incorrect readings...",
+    date: "Created: Aug. 20, 2025",
+    status: "Pending",
+    color: "#848484"
+  },
+  {
+    subject: "Meter Reading Error",
+    title: "Blocked Meter",
+    ticketId: "Ticket # 47848879",
+    message: "Smart meter showing blocked",
+    date: "Created: Aug. 20, 2025",
+    status: "Unattended",
+    color: "#DB0000"
+  },
+]
