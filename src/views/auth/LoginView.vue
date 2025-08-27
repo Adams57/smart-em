@@ -95,7 +95,7 @@
   import { microsoftIcon } from "@/components/icon-assets/icons";
   import { ROUTES } from "@/router/routes";
   import icon from "@/components/icon-assets/Icon.vue";
-  import AuthLayout from "./components/AuthLayout.vue";  
+  import AuthLayout from "./components/AuthLayout.vue";
   import router from "@/router";
 
   const toast = useToast();
@@ -124,7 +124,6 @@
         // return credentials;
         router.push({ name: ROUTES.HOME.name });
         console.log(credentials);
-        
       },
       onError: (error: Error) => {
         toast.add({
