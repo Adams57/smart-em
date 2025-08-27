@@ -88,17 +88,18 @@
   import * as yup from "yup";
   import { useToast } from "primevue/usetoast";
   import { useMutation } from "@pinia/colada";
-  import { useAuthStore } from "@/store/auth";
+  // import { useAuthStore } from "@/store/auth";
   import { msalInstance } from "@/config/msalConfig";
   import { ref } from "vue";
   import { LoginCredentials } from "@/types/auth";
   import { microsoftIcon } from "@/components/icon-assets/icons";
   import { ROUTES } from "@/router/routes";
   import icon from "@/components/icon-assets/Icon.vue";
-  import AuthLayout from "./components/AuthLayout.vue";
+  import AuthLayout from "./components/AuthLayout.vue";  
+  import router from "@/router";
 
   const toast = useToast();
-  const authStore = useAuthStore();
+  // const authStore = useAuthStore();
 
   const { handleSubmit: handleEmailLoginSubmit, errors } = useForm({
     validationSchema: yup.object({
@@ -119,8 +120,11 @@
   const { mutate: emailLoginMutate, isLoading: isEmailLoginLoading } =
     useMutation({
       mutation: async (credentials: LoginCredentials) => {
-        await authStore.login(credentials);
-        return credentials;
+        // await authStore.login(credentials);
+        // return credentials;
+        router.push({ name: ROUTES.HOME.name });
+        console.log(credentials);
+        
       },
       onError: (error: Error) => {
         toast.add({

@@ -34,61 +34,61 @@ const routes: RouteRecordRaw[] = [
     name: ROUTES.HOME.name,
     component: ROUTES.HOME.component,
     redirect: ROUTES.DASHBOARD.path,
-    meta: { requiresAuth: true },
+    meta: { requiresAuth: false },
     children: [
       {
         path: ROUTES.DASHBOARD.path,
         name: ROUTES.DASHBOARD.name,
         component: ROUTES.DASHBOARD.component,
-        meta: { requiresAuth: true }
+        meta: { requiresAuth: false }
       },
       {
         path: ROUTES.USERS.path,
         name: ROUTES.USERS.name,
         component: ROUTES.USERS.component,
-        meta: { requiresAuth: true }
+        meta: { requiresAuth: false }
       },
       {
         path: ROUTES.METER_CONSUMPTION.path,
         name: ROUTES.METER_CONSUMPTION.name,
         component: ROUTES.METER_CONSUMPTION.component,
-        meta: { requiresAuth: true }
+        meta: { requiresAuth: false }
       },
       {
         path: ROUTES.BILLING_PAYMENTS.path,
         name: ROUTES.BILLING_PAYMENTS.name,
         component: ROUTES.BILLING_PAYMENTS.component,
-        meta: { requiresAuth: true }
+        meta: { requiresAuth: false }
       },
       {
         path: ROUTES.UNITS_SHARING.path,
         name: ROUTES.UNITS_SHARING.name,
         component: ROUTES.UNITS_SHARING.component,
-        meta: { requiresAuth: true }
+        meta: { requiresAuth: false }
       },
       {
         path: ROUTES.UNITS_PORTABILITY.path,
         name: ROUTES.UNITS_PORTABILITY.name,
         component: ROUTES.UNITS_PORTABILITY.component,
-        meta: { requiresAuth: true }
+        meta: { requiresAuth: false }
       },
       {
         path: ROUTES.NOTIFICATION_ALERTS.path,
         name: ROUTES.NOTIFICATION_ALERTS.name,
         component: ROUTES.NOTIFICATION_ALERTS.component,
-        meta: { requiresAuth: true }
+        meta: { requiresAuth: false }
       },
       {
         path: ROUTES.REMOTE_CONTROL.path,
         name: ROUTES.REMOTE_CONTROL.name,
         component: ROUTES.REMOTE_CONTROL.component,
-        meta: { requiresAuth: true }
+        meta: { requiresAuth: false }
       },
       {
         path: ROUTES.COMPLAINTS_SUPPORT.path,
         name: ROUTES.COMPLAINTS_SUPPORT.name,
         component: ROUTES.COMPLAINTS_SUPPORT.component,
-        meta: { requiresAuth: true }
+        meta: { requiresAuth: false }
       }
     ]
   }
