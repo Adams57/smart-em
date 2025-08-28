@@ -190,6 +190,8 @@
   import { useAuthStore } from "@/store/auth";
   import { useToast } from "primevue/usetoast";
   import { logoIcon } from "@/components/icon-assets/icons";
+  import router from "@/router";
+  import { ROUTES } from "@/router/routes";
   const route = useRoute();
   const authStore = useAuthStore();
   const toast = useToast();
@@ -233,7 +235,8 @@
   // Handle logout
   const handleLogout = async () => {
     try {
-      await authStore.logout();
+      // await authStore.logout();
+      router.push({ name: ROUTES.LOGIN.name });
       toast.add({
         severity: "success",
         summary: "Success",
